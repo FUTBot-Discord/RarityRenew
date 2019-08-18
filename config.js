@@ -2,12 +2,12 @@ const dotenv = require('dotenv');
 dotenv.config();
 module.exports = {
     "rethinkdb": {
-        "host": process.env.RDB_HOST,
-        "port": process.env.RDB_PORT,
-        "db": process.env.RDB_DB
+        "host": "futbot-rethinkdb-1",
+        "port": "28015",
+        "db": "futbot"
     },
     "roptions": {
-        "uri": process.env.REQUEST_URI,
+        "uri": "https://www.easports.com/fifa/ultimate-team/api/fut/display",
         "headers": { "Cache-Control": "no-cache" }
     }
 }
