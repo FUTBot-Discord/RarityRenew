@@ -7,7 +7,7 @@ module.exports = {
         "db": process.env.RDB_DB
     },
     "roptions": {
-        "uri": process.env.PROXY_URI,
+        "uri": process.env.REQUEST_URI,
         "headers": { "Cache-Control": "no-cache" }
     }
 }
