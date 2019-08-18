@@ -1,1 +1,1 @@
-RarityRenew
+ProxyRenew
