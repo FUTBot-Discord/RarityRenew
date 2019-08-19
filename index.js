@@ -63,7 +63,7 @@ function skipRarities(listSkip, listRarities) {
     for (let keyRarity in listRarities) {
         let valueRarity = listRarities[keyRarity];
         for (i = 0; i < listSkip.length; i++) {
-            if (valueRarity.startsWith(listSkip[i].rarity)) delete listRarities[keyRarity];
+            if (valueRarity.startsWith(listSkip[i].rarity) || keyRarity.startsWith(listSkip[i].rarity)) delete listRarities[keyRarity];
         }
     }
     return listRarities;
