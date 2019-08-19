@@ -5,6 +5,11 @@ const pool = require("./functions/rethinkdb");
 const r = require("rethinkdb");
 const roptions = require("./config.js").roptions;
 
+console.log(`=====================================================`);
+console.log(`Started renewing rarities at ${format(new Date(), 'DD-MM-YY HH:mm:ss:SSS')}`);
+init(roptions);
+console.log(`Stopped renewing rarities at ${format(new Date(), 'DD-MM-YY HH:mm:ss:SSS')}`);
+
 cron.schedule('15,45 * * * *', () => {
     console.log(`=====================================================`);
     console.log(`Started renewing rarities at ${format(new Date(), 'DD-MM-YY HH:mm:ss:SSS')}`);
