@@ -53,7 +53,7 @@ async function getChangeList() {
 
 function changeRarities(listChange, listRarities) {
     for (i = 0; i < listChange.length; i++) {
-        const itemChange = listChange[i];
+        let itemChange = listChange[i];
         listRarities[itemChange.id] = itemChange.rarity;
     }
     return listRarities;
